@@ -1,0 +1,16 @@
+FROM golang:1.22-alpine AS builder
+
+WORKDIR /src
+COPY go.mod ./
+COPY . .
+RUN go mod tidy
+RUN go mod download
+RUN go build -o /bin/quanto ./cmd/quanto
+
+FROM golang:1.22-alpine AS tester
+
+WORKDIR /src
+COPY --from=builder /src /src
+COPY --from=builder /bin/quanto /bin/quanto
+
+CMD ["go", "test", "-v", "./..."]

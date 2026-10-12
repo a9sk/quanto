@@ -1,0 +1,6 @@
+bin/
+.git/
+*.md
+specs/
+docs/
+scripts/test-in-docker.sh
