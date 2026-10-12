@@ -20,5 +20,3 @@ This directory contains the detailed implementation specifications for the Quant
 | [13-security-and-safety.md](13-security-and-safety.md) | Security precautions |
 | [14-deliverables.md](14-deliverables.md) | Expected deliverables |
 | [15-future-enhancements.md](15-future-enhancements.md) | Post-v1 roadmap |
-
-For the original monolithic specification, see `../SPECS.md`.
